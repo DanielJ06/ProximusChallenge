@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { v4 as UUID } from "uuid";
-import React from "react";
+import React, { useState } from "react";
 import { FlatList } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import { jsonToCSV } from "react-native-csv";
@@ -19,6 +19,7 @@ import FabButton from "../../components/FabButton";
 import OutlineButton from "../../components/OutlineButton";
 import { RootState } from "../../utils/models/RootState";
 import { Device } from "../../utils/models/device";
+import LoadingOverlayer from "../../components/LoadingOverlayer";
 
 declare global {
 	interface FormDataValue {
@@ -40,6 +41,7 @@ const Home: React.FC = () => {
 	const devices = useSelector((state: RootState) => state.devices.devices);
 	const navigation = useNavigation<NativeStackNavigationProp<any, any>>();
 	const dispatch = useDispatch();
+	const [importLoading, setImportLoading] = useState(false);
 
 	const parseCsv = async (formDataFile: FormData) => {
 		const { data } = await parserApi.post("/uploadCsv", formDataFile, {
@@ -63,6 +65,7 @@ const Home: React.FC = () => {
 	};
 
 	const handleImport = async () => {
+		setImportLoading(true);
 		DocumentPicker.getDocumentAsync({
 			multiple: false,
 			type: ["text/csv", "text/comma-separated-values"],
@@ -77,6 +80,7 @@ const Home: React.FC = () => {
 				const parsed = await parseCsv(formData);
 				if (parsed?.devices) {
 					dispatch(registerMultiple(parsed.devices));
+					setImportLoading(false);
 				}
 			} catch (err) {
 				console.tron.log!(err);
@@ -110,6 +114,7 @@ const Home: React.FC = () => {
 					onPress={() => navigation.navigate("DeviceInfo", { edit: false })}
 				/>
 			</S.Container>
+			<LoadingOverlayer visible={importLoading} />
 		</>
 	);
 };
