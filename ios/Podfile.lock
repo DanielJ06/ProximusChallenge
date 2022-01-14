@@ -5,6 +5,8 @@ PODS:
     - ExpoModulesCore
   - EXConstants (13.0.0):
     - ExpoModulesCore
+  - EXDocumentPicker (10.1.0):
+    - ExpoModulesCore
   - EXErrorRecovery (3.0.4):
     - ExpoModulesCore
   - EXFileSystem (13.1.0):
@@ -18,6 +20,8 @@ PODS:
   - ExpoModulesCore (0.6.4):
     - React-Core
     - ReactCommon/turbomodule/core
+  - EXSharing (10.1.0):
+    - ExpoModulesCore
   - EXSplashScreen (0.14.1):
     - ExpoModulesCore
     - React-Core
@@ -30,6 +34,10 @@ PODS:
     - React-jsi (= 0.64.3)
     - ReactCommon/turbomodule/core (= 0.64.3)
   - glog (0.3.5)
+  - lottie-ios (3.2.3)
+  - lottie-react-native (5.0.1):
+    - lottie-ios (~> 3.2.3)
+    - React-Core
   - RCT-Folly (2020.01.13.00):
     - boost-for-react-native
     - DoubleConversion
@@ -223,6 +231,10 @@ PODS:
     - React-jsi (= 0.64.3)
     - React-perflogger (= 0.64.3)
   - React-jsinspector (0.64.3)
+  - react-native-get-random-values (1.7.2):
+    - React-Core
+  - react-native-safe-area-context (3.3.2):
+    - React-Core
   - React-perflogger (0.64.3)
   - React-RCTActionSheet (0.64.3):
     - React-Core/RCTActionSheetHeaders (= 0.64.3)
@@ -287,22 +299,31 @@ PODS:
     - React-cxxreact (= 0.64.3)
     - React-jsi (= 0.64.3)
     - React-perflogger (= 0.64.3)
+  - RNScreens (3.10.1):
+    - React-Core
+    - React-RCTImage
+  - RNSVG (12.1.1):
+    - React
   - Yoga (1.14.0)
 
 DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - EXApplication (from `../node_modules/expo-application/ios`)
   - EXConstants (from `../node_modules/expo-constants/ios`)
+  - EXDocumentPicker (from `../node_modules/expo-document-picker/ios`)
   - EXErrorRecovery (from `../node_modules/expo-error-recovery/ios`)
   - EXFileSystem (from `../node_modules/expo-file-system/ios`)
   - EXFont (from `../node_modules/expo-font/ios`)
   - EXKeepAwake (from `../node_modules/expo-keep-awake/ios`)
   - Expo (from `../node_modules/expo/ios`)
   - ExpoModulesCore (from `../node_modules/expo-modules-core/ios`)
+  - EXSharing (from `../node_modules/expo-sharing/ios`)
   - EXSplashScreen (from `../node_modules/expo-splash-screen/ios`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - lottie-ios (from `../node_modules/lottie-ios`)
+  - lottie-react-native (from `../node_modules/lottie-react-native`)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
@@ -316,6 +337,8 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-get-random-values (from `../node_modules/react-native-get-random-values`)
+  - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -328,6 +351,8 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RNScreens (from `../node_modules/react-native-screens`)
+  - RNSVG (from `../node_modules/react-native-svg`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -341,6 +366,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-application/ios"
   EXConstants:
     :path: "../node_modules/expo-constants/ios"
+  EXDocumentPicker:
+    :path: "../node_modules/expo-document-picker/ios"
   EXErrorRecovery:
     :path: "../node_modules/expo-error-recovery/ios"
   EXFileSystem:
@@ -353,6 +380,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo/ios"
   ExpoModulesCore:
     :path: "../node_modules/expo-modules-core/ios"
+  EXSharing:
+    :path: "../node_modules/expo-sharing/ios"
   EXSplashScreen:
     :path: "../node_modules/expo-splash-screen/ios"
   FBLazyVector:
@@ -361,6 +390,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/React/FBReactNativeSpec"
   glog:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
+  lottie-ios:
+    :path: "../node_modules/lottie-ios"
+  lottie-react-native:
+    :path: "../node_modules/lottie-react-native"
   RCT-Folly:
     :podspec: "../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
   RCTRequired:
@@ -383,6 +416,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-get-random-values:
+    :path: "../node_modules/react-native-get-random-values"
+  react-native-safe-area-context:
+    :path: "../node_modules/react-native-safe-area-context"
   React-perflogger:
     :path: "../node_modules/react-native/ReactCommon/reactperflogger"
   React-RCTActionSheet:
@@ -407,6 +444,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/runtimeexecutor"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNScreens:
+    :path: "../node_modules/react-native-screens"
+  RNSVG:
+    :path: "../node_modules/react-native-svg"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -415,16 +456,20 @@ SPEC CHECKSUMS:
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   EXApplication: bdc8dc27713235565da1029a34385229f31b8e08
   EXConstants: 5d18484e38e8eacef7695a82214b6ac90133dedf
+  EXDocumentPicker: 2989eda5975604203c86c66405a2c242053dcdc7
   EXErrorRecovery: deea88a01d38f8b1c1181b4e1d179b0ba0e4bb5b
   EXFileSystem: 7d1309ba6b38b82ef7fc9e80174de3f9184ac8b4
   EXFont: 1fb13af43dc517c01c0ff21a6e32f9f9bf2ea602
   EXKeepAwake: b571c2ad8323b2fced6e907766e2549f75119471
   Expo: d9b8b5e49c200471fc473a652a84fe30dee73027
   ExpoModulesCore: 64abda7af7cf659d2fa092934e29c6f4ea7e849f
+  EXSharing: 2e26cf64fb2a89484b4f6ff8da12d6d752f83962
   EXSplashScreen: 7872675b95bb07c25f922b3d3dfae70c76fb5a00
   FBLazyVector: c71c5917ec0ad2de41d5d06a5855f6d5eda06971
   FBReactNativeSpec: 407cf21cb02dd158e255ea2c3a9e29f2ebb067c8
   glog: 73c2498ac6884b13ede40eda8228cb1eee9d9d62
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+  lottie-react-native: a029a86e1689c86a07169c520ae770e84348cd20
   RCT-Folly: ec7a233ccc97cc556cf7237f0db1ff65b986f27c
   RCTRequired: d34bf57e17cb6e3b2681f4809b13843c021feb6c
   RCTTypeSafety: 8dab4933124ed39bb0c1d88d74d61b1eb950f28f
@@ -436,6 +481,8 @@ SPEC CHECKSUMS:
   React-jsi: a8b09c29521c798f1783348b37b511ba7b3dbeb3
   React-jsiexecutor: df6abc9fafbecb8e5b7a5fbc5e6d4bd017d594d5
   React-jsinspector: 34e23860273a23695342f58eed3ffd3ba10c31e0
+  react-native-get-random-values: 30b3f74ca34e30e2e480de48e4add2706a40ac8f
+  react-native-safe-area-context: 584dc04881deb49474363f3be89e4ca0e854c057
   React-perflogger: cc76a4254d19640f1d8ad1c66fdee800414b805c
   React-RCTActionSheet: 7448f049318d8d7e8a9a1ebb742ada721757eea8
   React-RCTAnimation: fb9b3fa1a4a9f5e6ab01b3368693ce69860ba76a
@@ -448,6 +495,8 @@ SPEC CHECKSUMS:
   React-RCTVibration: c7f845861e79eae13dc1e8217a3cf47a3945b504
   React-runtimeexecutor: 493d9abb8b23c3f84e19ae221eeba92cadcb70dc
   ReactCommon: 8fea6422328e2fc093e25c9fac67adbcf0f04fb4
+  RNScreens: 522705f2e5c9d27efb17f24aceb2bf8335bc7b8e
+  RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
   Yoga: e6ecf3fa25af9d4c87e94ad7d5d292eedef49749
 
 PODFILE CHECKSUM: ec18ecd93041f6b7306a163668690b80f05976b9

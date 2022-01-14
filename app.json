@@ -2,6 +2,9 @@
   "expo": {
     "name": "prx",
     "slug": "prx",
+    "ios": {
+      "usesIcloudStorage": true
+    },
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
